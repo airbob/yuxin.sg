@@ -115,6 +115,17 @@ p {
 .cta-button:hover {
     background-color: var(--bg-color-4);
 }
+.cta-button:focus {
+    outline: none;
+}
+
+.cta-button:active {
+    transform: scale(0.98);
+}
+.cta-button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
 
 #introduction {
     background-color: var(--bg-color-1);
@@ -275,11 +286,6 @@ p {
 
 .contact-description p {
     margin-bottom: 1rem; /* Reduced margin-bottom */
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 0.5rem; /* Reduced margin-top */
 }
 
 #contact h2 {
