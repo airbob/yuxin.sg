@@ -4,8 +4,7 @@
     --text-color: #333;
     --bg-color-1: #E0F2F1; /* Very light teal */
     --bg-color-2: #B2DFDB; /* Light teal */
-    --bg-color-3: #E0F2F1;
-    --bg-color-4: #B2DFDB; /* Light teal */
+    --bg-color-3: #004d4d; 
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -67,6 +66,25 @@ nav {
     color: var(--primary-color);
 }
 
+a {
+    color: var(--text-color);
+    text-decoration: none;        /* Remove underline */
+    transition: color 0.3s ease;  /* Smooth color transition on hover */
+  }
+  
+  a:hover {
+    color: var(--primary-color);               /* Color when hovering */
+    text-decoration: underline;   /* Add underline on hover */
+  }
+  
+  a:visited {
+    color: var(--bg-color-2);         /* Color for visited links */
+  }
+  
+  a:active {
+    color: var(--bg-color-2);                /* Color when link is clicked */
+  }
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -113,18 +131,7 @@ p {
     transition: background-color 0.3s ease;
 }
 .cta-button:hover {
-    background-color: var(--bg-color-4);
-}
-.cta-button:focus {
-    outline: none;
-}
-
-.cta-button:active {
-    transform: scale(0.98);
-}
-.cta-button:focus:not(:focus-visible) {
-    outline: none;
-    box-shadow: none;
+    background-color: var(--bg-color-3);
 }
 
 #introduction {
@@ -146,11 +153,11 @@ p {
     background-image: url('https://images.unsplash.com/photo-1604699229817-27301bdfed68?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #who-am-i {
-    background-color: var(--bg-color-3);
+    background-color: var(--bg-color-1);
 }
 
 .about-content {
@@ -244,7 +251,7 @@ p {
 
 
 #contact {
-    background-color: var(--bg-color-4);
+    background-color: var(--bg-color-2);
     padding: 4rem 0; /* Reduced padding */
 }
 
@@ -286,6 +293,11 @@ p {
 
 .contact-description p {
     margin-bottom: 1rem; /* Reduced margin-bottom */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 0.5rem; /* Reduced margin-top */
 }
 
 #contact h2 {
