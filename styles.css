@@ -3,7 +3,7 @@
     --secondary-color: #98FB98; /* Light green */
     --text-color: #333;
     --bg-color-1: #E0F2F1; /* Very light teal */
-    --bg-color-2: #B2DFDB; /* Light teal */
+    --bg-color-2: #cee7e7; /* Light teal */
     --bg-color-3: #004d4d; 
 }
 body {
@@ -66,24 +66,16 @@ nav {
     color: var(--primary-color);
 }
 
-a {
+.contact-details a {
     color: var(--text-color);
     text-decoration: none;        /* Remove underline */
     transition: color 0.3s ease;  /* Smooth color transition on hover */
-  }
+}
   
-  a:hover {
+.contact-details  a:hover {
     color: var(--primary-color);               /* Color when hovering */
     text-decoration: underline;   /* Add underline on hover */
-  }
-  
-  a:visited {
-    color: var(--bg-color-2);         /* Color for visited links */
-  }
-  
-  a:active {
-    color: var(--bg-color-2);                /* Color when link is clicked */
-  }
+}
 
 .mobile-menu-toggle {
     display: none;
@@ -150,7 +142,7 @@ p {
 .intro-image {
     flex: 1;
     height: 400px;
-    background-image: url('https://images.unsplash.com/photo-1604699229817-27301bdfed68?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+    background-image: url('https://images.unsplash.com/photo-1452109777848-a4de775da10d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
