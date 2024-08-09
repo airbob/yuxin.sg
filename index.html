@@ -155,7 +155,7 @@
                     <p>开始你的自我觉察, 提升心理健康之旅。</p>
                     <p>请联系我们安排咨询或了解更多我们的服务。</p>
                     <p>咨询费用: 线上 100S$/50分钟 | 线下 135S$/50分钟</p>
-                    <a href="mailto:info@yuxin.sg" class="cta-button">联系我们</a>
+                    <a onclick="openWhatsApp()" class="cta-button">WhatsApp联系</a>
                 </div>
             </div>
         </div>
@@ -175,6 +175,22 @@
                 this.blur();
             });
         });
+        function openWhatsApp() {
+        // Replace 1234567890 with the desired phone number
+        var phoneNumber = "+6598586126";
+        
+        // Define your custom message
+        var message = "你好,我想咨询一些问题如下:";
+        
+        // Encode the message for URL
+        var encodedMessage = encodeURIComponent(message);
+        
+        // Create the WhatsApp URL with the message
+        var url = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+        
+        // Open the URL in a new tab
+        window.open(url, '_blank');
+    }
     </script>
 </body>
 </html>
