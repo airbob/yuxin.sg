@@ -32,9 +32,9 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    font-family: "ZCOOL XiaoWei", 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
-    font-weight: normal;
+    font-weight: bold;
     color: var(--primary-color);
 }
 
@@ -64,6 +64,31 @@ nav {
 
 .nav-menu li a:hover {
     color: var(--primary-color);
+}
+
+/* Language switcher styles */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.language-switcher a:hover,
+.language-switcher a.active {
+    color: var(--primary-color);
+}
+
+.language-switcher span {
+    color: var(--text-color);
+    opacity: 0.5;
+    margin: 0 0.2rem;
 }
 
 .contact-details a {
@@ -108,6 +133,11 @@ h2 {
     margin-bottom: 2rem;
     color: var(--primary-color);
 }
+
+.intro-text h2 {
+    font-size: 2rem;
+}
+
 p {
     margin-bottom: 1.5rem;
 }
@@ -317,6 +347,11 @@ p {
         margin-top: 2rem;
     }
 
+    .language-switcher {
+        margin-left: 0;
+        justify-content: center;
+        padding: 1rem 0;
+    }
     .contact-content {
         flex-direction: column;
         gap: 1.5rem; /* Further reduced gap for mobile */
