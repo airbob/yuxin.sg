@@ -32,9 +32,9 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Dancing Script", "Ma Shan Zheng", 'Roboto', sans-serif;
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: normal;
     color: var(--primary-color);
 }
 
