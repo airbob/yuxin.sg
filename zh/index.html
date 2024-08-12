@@ -43,9 +43,10 @@
                     <li><a href="#who-am-i">关于我们</a></li>
                     <li><a href="#contact">联系我们</a></li>
                     <li class="language-switcher">
-                        <a href="index.html" class="active" lang="en">EN</a>
-                        <span>|</span>
-                        <a href="index-zh.html" lang="zh">中文</a>
+                        <select onchange="switchLanguage(this.value)">
+                            <option value="en">EN</option>
+                            <option value="zh" selected>中文</option>
+                        </select>
                     </li>
                 </ul>
             </nav>
@@ -181,18 +182,13 @@
         </div>
     </footer>
     <script>
-        // Set active language based on current page
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentLang = document.documentElement.lang;
-        const langLinks = document.querySelectorAll('.language-switcher a');
-        langLinks.forEach(link => {
-            if (link.getAttribute('lang') === currentLang) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                window.location.href = 'index.html';
+            } else if (lang === 'zh') {
+                window.location.href = 'index-zh.html';
             }
-        });
-    });
+        }
 
         document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-menu').classList.toggle('active');

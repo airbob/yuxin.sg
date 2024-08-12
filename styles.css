@@ -66,29 +66,10 @@ nav {
     color: var(--primary-color);
 }
 
-/* Language switcher styles */
-.language-switcher {
-    display: flex;
-    align-items: center;
-    margin-left: 1.5rem;
-}
-
-.language-switcher a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.language-switcher a:hover,
-.language-switcher a.active {
-    color: var(--primary-color);
-}
-
-.language-switcher span {
-    color: var(--text-color);
-    opacity: 0.5;
-    margin: 0 0.2rem;
+.language-switcher select {
+    padding: 2px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .contact-details a {
