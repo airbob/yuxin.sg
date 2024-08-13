@@ -72,15 +72,6 @@ nav {
     font-weight: 500;
 }
 
-.pill {
-    display: inline-block;
-    padding: 0.15em;
-    background-color: var(--bg-color-1);
-    border-radius: 6px;
-    border-width: 1px;
-    border-color: var(--text-color);
-  }
-
 .contact-details a {
     color: var(--text-color);
     text-decoration: none;        /* Remove underline */
