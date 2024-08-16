@@ -119,6 +119,9 @@
                     <span>Mindfulness and Meditation Guidance</span>
                 </li>
             </ul>
+            <p class="privacy-note">
+                <i class="fas fa-shield-halved"></i> We highly value your privacy, and confidentiality is a key responsibility at YuXin Healing Hub. From the moment you contact us, your personal information is strictly protected. The content of any subsequent consultations or assessment sessions will not be disclosed to anyone without your consent.
+            </p>
         </div>
     </section>
 
@@ -149,6 +152,15 @@
                         <li>
                             <i class="fas fa-envelope"></i>
                             <span><a href="mailto:info@yuxin.sg">info@yuxin.sg</a></span>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-weixin"></i>
+                            <div class="wechat-container">
+                                <a href="weixin://dl/add/WeChatID">Aleotrees</a>
+                                <div class="qr-popover">
+                                    <img src="../assets/wechat_qr.jpeg" alt="WeChat QR Code" class="qr-code">
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
@@ -195,6 +207,22 @@
         document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('click', function() {
                 this.blur();
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const wechatLink = document.querySelector('.wechat-link');
+            const qrPopover = document.querySelector('.qr-popover');
+
+            wechatLink.addEventListener('mouseenter', function() {
+                setTimeout(() => {
+                    qrPopover.style.opacity = '1';
+                    qrPopover.style.visibility = 'visible';
+                }, 100);
+            });
+
+            wechatLink.addEventListener('mouseleave', function() {
+                qrPopover.style.opacity = '0';
+                qrPopover.style.visibility = 'hidden';
             });
         });
         function openWhatsApp() {
