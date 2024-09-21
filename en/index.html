@@ -42,11 +42,12 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#who-am-i">Our Therapist</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="language-switcher">
-                        <select onchange="switchLanguage(this.value)">
-                            <option value="en" selected>EN</option>
-                            <option value="zh">中文</option>
-                        </select>
+                    <li class="language-switch">
+                        <button id="languageBtn">EN</button>
+                        <div class="language-options" id="languageOptions">
+                            <a href="#" data-lang="en">EN</a>
+                            <a href="#" data-lang="zh">中文</a>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -195,7 +196,32 @@
         </div>
     </footer>
     <script>
-        function switchLanguage(lang) {
+// JavaScript remains unchanged
+        const languageBtn = document.getElementById('languageBtn');
+        const languageOptions = document.getElementById('languageOptions');
+        const welcome = document.getElementById('welcome');
+        const description = document.getElementById('description');
+
+        languageBtn.addEventListener('click', () => {
+            languageOptions.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!languageBtn.contains(e.target) && !languageOptions.contains(e.target)) {
+                languageOptions.classList.remove('show');
+            }
+        });
+
+        languageOptions.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                e.preventDefault();
+                const lang = e.target.dataset.lang;
+                changeLanguage(lang);
+                languageOptions.classList.remove('show');
+            }
+        });
+
+        function changeLanguage(lang) {
             if (lang === 'zh') {
                 window.location.href = '/';
             }
