@@ -69,15 +69,6 @@ nav {
     color: var(--primary-color);
 }
 
-.slack-code {
-    background-color: #f7f7f9;
-    border: 1px solid #e3e3e5;
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-size: 13px;
-    color: var(--primary-color);
-    white-space: nowrap;
-}
 .privacy-note {
     text-align: left;
     font-style: italic;
