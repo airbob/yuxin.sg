@@ -1,7 +1,7 @@
 :root {
     --primary-color: #b4a996; /* Teal */
     --secondary-color: #888072; /* Light green */
-    --text-color: #333;
+    --text-color: #4e4e4e;
     --bg-color-1: #ffffff;
     --bg-color-2: #f8f8f8;
     --bg-color-3: #888072; 
@@ -334,7 +334,7 @@ p {
 
 .service-item i {
     font-size: 1.25rem;
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-right: 0.75rem;
     width: 20px; /* Fixed width for alignment */
     text-align: center;
@@ -409,7 +409,7 @@ p {
 
 .contact-details i {
     font-size: 1.25rem; /* Slightly reduced icon size */
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-right: 0.75rem; /* Reduced margin-right */
     width: 20px; /* Reduced width */
     text-align: center;
