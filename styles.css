@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #008080; /* Teal */
-    --secondary-color: #98FB98; /* Light green */
+    --primary-color: #b4a996; /* Teal */
+    --secondary-color: #888072; /* Light green */
     --text-color: #333;
-    --bg-color-1: #E0F2F1; /* Very light teal */
-    --bg-color-2: #cee7e7; /* Light teal */
-    --bg-color-3: #004d4d; 
+    --bg-color-1: #ffffff;
+    --bg-color-2: #f8f8f8;
+    --bg-color-3: #888072; 
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -208,7 +208,7 @@ p {
 .intro-image {
     flex: 1;
     height: 400px;
-    background-image: url('https://images.unsplash.com/photo-1452109777848-a4de775da10d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+    background-image: url('https://images.unsplash.com/photo-1514845994104-1be22149278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -303,13 +303,17 @@ p {
     margin: 1em;
 }
 
+.about-education {
+    text-align: left;
+}
+
 .about-text {
     flex: 1;
 }
 
 
 #services {
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color-1);
     padding: 4rem 0;
 }
 
@@ -375,7 +379,7 @@ p {
 
 
 #contact {
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-2);
     padding: 4rem 0; /* Reduced padding */
 }
 
