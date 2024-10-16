@@ -217,9 +217,6 @@ p {
 #who-am-i {
     background-color: var(--bg-color-2);
 }
-#testimonial-section {
-    background-color: var(--bg-color-2);
-}
 
 .gallery-section {
     padding: 2rem 0;
@@ -383,6 +380,11 @@ p {
 
 #contact {
     background-color: var(--bg-color-1);
+    padding: 4rem 0; /* Reduced padding */
+}
+
+#testimonial-section {
+    background-color: var(--bg-color-2);
     padding: 4rem 0; /* Reduced padding */
 }
 
