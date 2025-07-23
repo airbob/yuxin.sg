@@ -440,6 +440,12 @@ p {
     color: var(--primary-color);;
 }
 @media (max-width: 768px) {
+    .hero-only h3 {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+
     .intro-content {
         flex-direction: column;
     }
