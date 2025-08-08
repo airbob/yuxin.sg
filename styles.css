@@ -209,7 +209,6 @@ p {
 
 .hero-only h3 {
     font-size: 2rem;
-    color: var(--primary-color);
     text-align: center;
     max-width: 60%;
     margin: 0 auto;
@@ -643,4 +642,94 @@ footer p {
     font-size: 0.8rem;
     color: var(--text-color);
     opacity: 0.8;
+}
+
+
+#psych-notes {
+    background-color: var(--bg-color-2);
+    padding: 4rem 0;
+}
+
+.notes-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* IE 10+ */
+}
+
+.notes-carousel::-webkit-scrollbar {
+    display: none;                   /* Chrome, Safari */
+}
+
+
+.note-card-container {
+    flex: 0 0 250px;
+    background-color: #fefefe;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 1rem;
+    scroll-snap-align: start;
+    font-size: 1.05rem;     /* larger font */
+    line-height: 1.3;       /* tighter spacing */
+    color: var(--text-color);
+    height: 80px;           /* fixed height */
+    display: flex;
+    align-items: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card-container a.note-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.note-card-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body > main {
+    flex: 1;
+}
+
+.note-detail a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.note-detail a:hover {
+    text-decoration: underline;
+    color: #a08f74; /* Optional: slightly deeper gold on hover */
+}
+
+.markdown-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.markdown-body th, .markdown-body td { border: 1px solid #e6e6e6; padding: .6rem .75rem; text-align: left; }
+.markdown-body thead th { background: #fafafa; color: var(--text-color); }
+.markdown-body h3, .markdown-body h4 { color: var(--primary-color); margin: 1.2rem 0 .6rem; }
+.markdown-body ul, .markdown-body ol { padding-left: 1.2rem; }
+.markdown-body hr { border: 0; border-top: 1px solid #eee; margin: 1.25rem 0; }
+.markdown-body {
+    max-width: 800px; /* narrower than full content-wrapper */
+    margin: 0 auto; /* center horizontally */
+    background-color: rgba(250, 250, 250, 0.9); /* slight background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* subtle shadow */
 }
